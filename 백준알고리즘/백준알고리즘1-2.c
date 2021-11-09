@@ -1,11 +1,11 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 
 int main(void)
 {
 
 	for (int i = 0; i < 2; i++)
 	{
-		printf("°­ÇÑÄ£±¸ ´ëÇÑÀ°±º");
+		printf("ê°•í•œì¹œêµ¬ ëŒ€í•œìœ¡êµ°");
 	}
 
 
