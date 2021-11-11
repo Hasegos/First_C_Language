@@ -3,7 +3,7 @@
 int main(void)
 {
     int A=0,B=0;
-    printf("µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+    printf("ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥í•˜ì„¸ìš”");
     scanf("%d %d",&A,&B);
     printf("%d",A*B);
     
