@@ -15,83 +15,84 @@ int main(void)
     int minute=0; //  분 표현
     printf("현재 시간을 말하세요.");
     scanf("%d %d",&hour,&minute);
-    if(minute == 0)
+    if(minute == 0)  // 분에따라 조율 하기로 마음먹음 분이 0분일때
     {
-        if(hour == 0)
+        if(hour == 0)  // 분이 0분이고 시간도 0시간이라면
         {
-            hour = 23;
+            hour = 23; // 23시간으로 바꾸고
+            minute = 15; // 60분에서 45분뺀 15분 적용
             printf("%d %d",hour,minute);
         }
-        else if(hour > 0)
+        else if(hour > 0) // 분이 0분이고 시간이 0시간 보다 크다면
         {
-            if(hour == 1)
-            {
-                hour == 0;
-                minute == 15;
+            if(hour == 1) // 그게 하필 시간이 1시간이라면
+            { 
+                hour == 0; // 시간 0으로 돌리고
+                minute == 15; // 분또한 45분을 돌려서 15분으로 적용
                 printf("%d %d",hour,minute);
             }
-            else if(hour > 1)
+            else if(hour > 1) // 분이 0분이고 시간이 1보다 크다면 
             {
-                hour-=1;
-                minute = 15;
+                hour-=1; // 시간에 1시간을 빼고
+                minute = 15; // 분또한 60분으로 돌려서 45분 뺀 15분 적용
                 printf("%d %d",hour,minute);
             }
 
         }
-        else
+        else // 시간이 0보다 작을순 없으므로 오류 처리
         {
             printf("잘못된 입력갑입니다.");
         }
     }
-    else if(minute > 0)
+    else if(minute > 0) // 만약 분이 0이상이라면
     {
-        if(hour == 0)
+        if(hour == 0) //  시간이 0 시간이라면
         {
-            if(minute > 45 && minute < 60)
+            if(minute > 45 && minute < 60) // 시간은 0시간이고 45분초과 60분 미만이라면
             {
-                minute -= 45;
+                minute -= 45; // 45분을 뺀 분을 적용
                 printf("%d %d",hour,minute);
             }
-            else if(minute == 45)
+            else if(minute == 45) // 시간은 0시간이고 분이 딱 45분이면
             {
-                minute = 0;
+                minute = 0; // 45분뺀 0분으로 적용
                printf("%d %d",hour,minute);
             }
-            else if(minute <45 && minute >1)
+            else if(minute <45 && minute >1) // 시간은 0시간이고 분이 45분 미만이라면
             {
-                minute -= 45;
-                minute += 60;
-                hour = 23;
+                minute -= 45; // 분에다가 45분을 뺀상태로 적용
+                minute += 60; // 여기다가 다시 60분을 더한걸 적용
+                hour = 23; //시간은 0시간이므로 23시로 돌리기
                 printf("%d %d",hour,minute);
             }
         }
-        else if(hour > 0)
+        else if(hour > 0) //만약 시간이 0시간보다크고 분이 0이상이라면
         {
-            if(minute > 45 && minute < 60)
+            if(minute > 45 && minute < 60) // 0시간보다크고 45분초과 60분 미만이라면
             {
-                minute -= 45;
+                minute -= 45; // 분에 45분 뺀 시간으로 적용
                 printf("%d %d",hour,minute);
             }
-            else if(minute == 45)
+            else if(minute == 45) // 0시간보다 크고 45분이면 
             {
-                minute = 0;
+                minute = 0; // 45분에 45분뺀 0분으로 적용
                printf("%d %d",hour,minute);
             }
-            else if(minute <45 && minute >1)
+            else if(minute <45 && minute >1) // 0시간보다 크고 1분이상 45분 미만이라면
             {
-                minute -= 45;
-                minute += 60;
-                hour -= 1;
+                minute -= 45; // 45분을 빼고
+                minute += 60; // 60분을 더해 적용
+                hour -= 1; // 시간 또한 1시간을 뺀다.
                 printf("%d %d",hour,minute);
             }
         }
-        else
+        else 
         {
             printf("잘못된 입력갑입니다.");    
         }
 
     }
-    else 
+    else // 분이 0보다 작을 순없어서 오류 처리
     {
         printf("잘못된 입력갑입니다.");
     }
