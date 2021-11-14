@@ -77,7 +77,7 @@ int main(void)
     }
     else
     {
-        printf("\n >> 떙! 틀렸어요, 정답은 %d입니다\n",(treament + 1));
+        printf("\n >> 땡! 틀렸어요, 정답은 %d입니다\n",(treament + 1));
     }
 
     return 0;
