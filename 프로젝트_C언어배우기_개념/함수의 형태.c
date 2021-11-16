@@ -1,44 +1,44 @@
 #include<stdio.h>
 
 
-// ¹İÈ¯Çü ÇÔ¼öÀÌ¸§(Àü´Ş°ª)
-// ÇÔ¼ö Á¾·ù
-// ¹İÈ¯°ªÀÌ ¾ø´Â ÇÔ¼ö
-void function_without_return(); // ¹İÈ¯°ª ¾ø´Â ÇÔ¼ö
-int function_with_return(); // ¹İÈ¯°ª ÀÖ´Â ÇÔ¼ö
-void p(int num); // °°Àº ¹®ÀåÀ» À§ÇØ  ¸¸µç pÇÔ¼ö
-void function_without_params(); // ÆÄ¶ó¹ÌÅÍ°¡ ¾ø´Â ÇÔ¼ö
-void function_with_params(int num1, int num2, int num3); // ÆÄ¶ó¹ÌÅÍ°¡ ÀÖ´Â ÇÔ¼ö
-int apple(int tot, int ate); // ÀüÃ¼ total °³¿¡¼­ ate°³¸¦ ¸Ô°í ³²Àº °³¼ö ¹İÈ¯
-int add(int num1, int num2); // Á¤¼öÇüÀ¸·Î 2°³ Àü´Ş°ª ¹İÈ¯
-int sub(int num1, int num2); // •û±â
-int mul(int num1, int num2); // °öÇÏ±â
-int div(int num1, int num2); // ³ª´©±â
+// ë°˜í™˜í˜• í•¨ìˆ˜ì´ë¦„(ì „ë‹¬ê°’)
+// í•¨ìˆ˜ ì¢…ë¥˜
+// ë°˜í™˜ê°’ì´ ì—†ëŠ” í•¨ìˆ˜
+void function_without_return(); // ë°˜í™˜ê°’ ì—†ëŠ” í•¨ìˆ˜
+int function_with_return(); // ë°˜í™˜ê°’ ìˆëŠ” í•¨ìˆ˜
+void p(int num); // ê°™ì€ ë¬¸ì¥ì„ ìœ„í•´  ë§Œë“  pí•¨ìˆ˜
+void function_without_params(); // íŒŒë¼ë¯¸í„°ê°€ ì—†ëŠ” í•¨ìˆ˜
+void function_with_params(int num1, int num2, int num3); // íŒŒë¼ë¯¸í„°ê°€ ìˆëŠ” í•¨ìˆ˜
+int apple(int tot, int ate); // ì „ì²´ total ê°œì—ì„œ ateê°œë¥¼ ë¨¹ê³  ë‚¨ì€ ê°œìˆ˜ ë°˜í™˜
+int add(int num1, int num2); // ì •ìˆ˜í˜•ìœ¼ë¡œ 2ê°œ ì „ë‹¬ê°’ ë°˜í™˜
+int sub(int num1, int num2); // ë¹¼ê¸°
+int mul(int num1, int num2); // ê³±í•˜ê¸°
+int div(int num1, int num2); // ë‚˜ëˆ„ê¸°
 
 int main(void)
 {   
 
 
-    // ¹İÈ¯°ªÀÌ ¾ø´Â ÇÔ¼ö
+    // ë°˜í™˜ê°’ì´ ì—†ëŠ” í•¨ìˆ˜
     // function_without_return();
 
-    // ¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼ö
+    // ë°˜í™˜ê°’ì´ ìˆëŠ” í•¨ìˆ˜
     // int ret = function_with_return();
     // p(ret);
 
-    // ÆÄ¶ó¹ÌÅÍ(Àü´Ş°ª)°¡ ¾ø´Â ÇÔ¼ö
+    // íŒŒë¼ë¯¸í„°(ì „ë‹¬ê°’)ê°€ ì—†ëŠ” í•¨ìˆ˜
     // function_without_params();
 
-    // ÆÄ¸®¹ÌÅÍ(Àü´Ş°ª)°¡ ÀÖ´Â ÇÔ¼ö
+    // íŒŒë¦¬ë¯¸í„°(ì „ë‹¬ê°’)ê°€ ìˆëŠ” í•¨ìˆ˜
     // function_with_params(101, 203, 23);
 
-    // ÆÄ¶ó¹ÌÅÍ(Àü´Ş°ª)µµ ¹Ş°í, ¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼ö
-    // int ret = apple (5,2);  // 5°³ÀÇ »ç°úÁß¿¡¼­ 2°³¸¦ ¸Ô¾ú¾î¿ä
-    // printf("»ç°ú 5°³ Áß¿¡¼­ 2°³¸¦ ¸ÔÀ¸¸é? %d °³°¡ ³²¾Æ¿ä.\n",ret);
-    // printf("»ç°ú %d °³ Áß¿¡ %d °³¸¦ ¸ÔÀ¸¸é? %d °³°¡ ³²¾Æ¿ä.\n",5,2,apple(5,2));
+    // íŒŒë¼ë¯¸í„°(ì „ë‹¬ê°’)ë„ ë°›ê³ , ë°˜í™˜ê°’ì´ ìˆëŠ” í•¨ìˆ˜
+    // int ret = apple (5,2);  // 5ê°œì˜ ì‚¬ê³¼ì¤‘ì—ì„œ 2ê°œë¥¼ ë¨¹ì—ˆì–´ìš”
+    // printf("ì‚¬ê³¼ 5ê°œ ì¤‘ì—ì„œ 2ê°œë¥¼ ë¨¹ìœ¼ë©´? %d ê°œê°€ ë‚¨ì•„ìš”.\n",ret);
+    // printf("ì‚¬ê³¼ %d ê°œ ì¤‘ì— %d ê°œë¥¼ ë¨¹ìœ¼ë©´? %d ê°œê°€ ë‚¨ì•„ìš”.\n",5,2,apple(5,2));
 
 
-    // °è»ê±â ÇÔ¼ö
+    // ê³„ì‚°ê¸° í•¨ìˆ˜
     int num = 2;
     num = add(num,3);
     p(num);
@@ -56,28 +56,28 @@ int main(void)
 }
 void function_without_return()
 {
-    printf("¹İÈ¯°ªÀÌ ¾ø´Â ÇÔ¼öÀÔ´Ï´Ù.");
+    printf("ë°˜í™˜ê°’ì´ ì—†ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤.");
 }
 int function_with_return()
 {
-    printf("¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼öÀÔ´Ï´Ù.\n");
+    printf("ë°˜í™˜ê°’ì´ ìˆëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤.\n");
     return 10;
 }
 void p(int num)
 {
-    printf("num´Â %d ÀÔ´Ï´Ù.\n",num);
+    printf("numëŠ” %d ì…ë‹ˆë‹¤.\n",num);
 }
 void function_without_params()
 {
-    printf("Àü´Ş°ªÀÌ ¾ø´Â ÇÔ¼öÀÔ´Ï´Ù.");
+    printf("ì „ë‹¬ê°’ì´ ì—†ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤.");
 }
 void function_with_params(int num1, int num2, int num3)
 {
-    printf("Àü´Ş°ªÀÌ ÀÖ´Â ÇÔ¼öÀÌ¸ç, Àü´Ş¹ŞÀº °ªÀº %d %d %d ÀÔ´Ï´Ù\n",num1,num2,num3);
+    printf("ì „ë‹¬ê°’ì´ ìˆëŠ” í•¨ìˆ˜ì´ë©°, ì „ë‹¬ë°›ì€ ê°’ì€ %d %d %d ì…ë‹ˆë‹¤\n",num1,num2,num3);
 }
 int apple(int tot, int ate)
 {
-    printf("Àü´Ş°ª°ú ¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼öÀÔ´Ï´Ù.\n");
+    printf("ì „ë‹¬ê°’ê³¼ ë°˜í™˜ê°’ì´ ìˆëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤.\n");
     return tot - ate;
 }
 int add(int num1, int num2)
