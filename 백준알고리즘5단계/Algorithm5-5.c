@@ -9,28 +9,25 @@
 // 일단 시험개수를 입력받아야함
 int main(void)
 {
-    int N = 0, max = 0;     // N : 입력횟수  max : 최댓값 설정  num : 입력받는 수  su : 누적문
-    float result = 0.0; 
+    int N = 0, max = 0;     // N : 입력횟수  max : 최댓값 설정 
     printf("시험을 몇개봤는지 얘기해주세요");
     scanf("%d",&N); 
     int num[N];
-    float su[N];
-    float hap = 0.0;
+    float su[N], hap = 0.0;  // su[N] 은 입력한 만큼 공간을 만든다. hap 은 su[N] 값을 다 더하는 역할
     for(int i = 0; i < N; i++)
     {
-        scanf("%d",&num[i]);
-        if(max < num[i])
+        scanf("%d",&num[i]); // 각 배열공간에 입력
+        if(max < num[i]) // 입력한 공간에서 최대값을 찾기
         {
-            max = num[i];
+            max = num[i]; // 최대값
         }              
     }
-    for(int i = 0; i < N; i++)
+    for(int i = 0; i < N; i++) // 다시 입력한 횟수 만큼반복
     {    
-      printf("%d\n",num[i]);
-      su[i] = (float)num[i] / (float)max * 100;  
-      hap = hap +su[i];         
+      su[i] = (float)num[i] / (float)max * 100;  // 입력받은 수를 실수로 바꾸고 최댓값도 실수로 바꿔서 계산후 su[N]에 저장 
+      hap = hap +su[i];     // su[N] 을 통해 각 계산된 값을 hap 에 누적      
     }
-    printf("%.2f",hap/N);
+    printf("%.2f",hap/N); // 소수점 2째자리까지 출력 hap 에다가 입력횟수를 나누기
 
-    return 0;
+    return 0; // 종료
 }
