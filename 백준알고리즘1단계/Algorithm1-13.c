@@ -13,8 +13,7 @@
  
 int main(void)
 {
-    int A=0,B=0;
-    printf("? ??? A? B? ?????.");
+    int A=0,B=0;    
     scanf("%d %d",&A,&B);
     // Ãâ·Â
     printf("%d\n",A*(B%10));
