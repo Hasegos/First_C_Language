@@ -12,6 +12,6 @@ int main(void)
     {                                      // 즉, 우리가 무한대로 빠진걸 종료시킬때 ctrl + z누르는 값(-1)이랑 같음!
         printf("%d\n", a + b);             // 기억하기 
     }  
-    return 0;   
- 
+
+    return 0;  
 }
