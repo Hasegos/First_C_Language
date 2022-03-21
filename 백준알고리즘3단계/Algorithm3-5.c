@@ -4,11 +4,19 @@
 
 int main(void)
 {
-    int N = 0;  
-    scanf("%d",&N);
-    for(int i = 1; i  <= N; i++)
+    // 规过 1
+    int n;
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i++)
     {
         printf("%d\n",i);
+    }
+    // 规过 2
+    int i = 1;
+    while (i <= n)
+    {
+        printf("%d\n",i);
+        i++;
     }
 
     return 0;
