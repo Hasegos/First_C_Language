@@ -4,14 +4,22 @@
 
 int main(void)
 {
-    int A=0, B=0,T=0;    
-    scanf("%d",&T);
-    for(int i=1; i <= T; i++) // 입력한 횟수까지 반복
+   // 방법 1
+    int t = 0,a,b;
+    scanf("%d",&t);
+    for(int i = 1; i <= t; i ++)
     {
-        scanf("%d %d",&A,&B); // 각 케이스마다 입력받고
-        int C = A + B; // 더한값 저장후
-        printf("%d\n",C); // 출력
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
     }
-
+    // 방법 2
+    int i = 1;
+    while (i <= t)
+    {
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+        i++;
+    }
+    
     return 0;
 }
