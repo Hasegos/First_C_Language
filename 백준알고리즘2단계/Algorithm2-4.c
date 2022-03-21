@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 //흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 
 //사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. "Quadrant n"은 "제n사분면"이라는 뜻이다.
 //예를 들어, 좌표가 (12, 5)인 점 A는 x좌표와 y좌표가 모두 양수이므로 제1사분면에 속한다. 
@@ -8,31 +9,29 @@
 
 int main(void)
 {
-    int X=0,Y=0;
-    printf("x 와 y 좌표를 입력하세요.");
-    scanf("%d %d",&X,&Y);
+    // 방법 1
+    int x, y,num = 0;
+    scanf("%d %d", &x, &y);   
+    num = (x > 0 && y > 0) ? 1 : (x < 0 && y > 0) ?  2 : (x < 0 && y < 0) ? 3 : (x > 0 && y < 0) ?  4 : 0;
+    printf("%d", num);
 
-    if(X > 0 && Y > 0)
+    // 방법 2
+    if(x > 0  && y > 0)
     {
-        printf("제 1사분면 입니다.");
+        printf("1");
     }
-    else if(X < 0 && Y > 0)
+    else if(x < 0  && y > 0)
     {
-        printf("제 2사분면 입니다.");
-    }    
-    else if(X < 0 && Y < 0)
-    {
-        printf("제 3사분면 입니다.");
-    }    
-    else if(X > 0 && Y < 0)
-    {
-        printf("제 4사분면 입니다.");
+        printf("2");
     }
-    else 
+    else if(x < 0  && y < 0)
     {
-        printf("잘못된 입력입니다.");
+        printf("3");
     }
-
+    else
+    {
+        printf("4");
+    }
 
     return 0;
 }
