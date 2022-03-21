@@ -4,13 +4,21 @@
 
 int main(void)
 {
-    int A = 0  , B = 0, T = 0;    
-    scanf("%d",&T);
-    for(int i = 1; i <= T; i++)
+    // 规过 1
+    int t,a,b;
+    scanf("%d",&t);
+    for(int i = 1; i <= t; i++)
     {
-        scanf("%d %d",&A,&B);
-        printf("Case #%d : %d\n",i,A+B);
+        scanf("%d %d",&a,&b);
+        printf("Case #%d: %d\n",i,a+b);
     }
-
+    // 规过 2
+    int i = 1;
+    while (i <= t)
+    {
+        scanf("%d %d",&a,&b);
+        printf("Case #%d: %d\n",i,a+b);
+        i++;
+    }
     return 0;
 }
