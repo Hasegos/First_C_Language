@@ -4,13 +4,23 @@
 
 int main(void)
 {
-    int N=0,k=0; // 입력 받을 N 과 누적할 K 변수 설정    
-    scanf("%d",&N);
-    for(int i=1; i<=N; i++) // 1부터 입력받은 수까지 계속 반복
+    // 방법 1
+    int n,sum = 0;
+    scanf("%d",&n);
+    for(int i = 1; i <= n; i++)
     {
-        k+=i; // 해당 수 누적
+        sum += i;
     }
-    printf("%d",k);
+    printf("%d",sum);
+
+    // 방법 2
+    int i = 1;
+    while (i <= n)
+    {
+        sum += i;
+        i++;
+    }
+    printf("%d",sum);
 
     return 0;
 }
