@@ -50,9 +50,7 @@ int main(void)
             printf("%d",num);
             break;
         }
-    }
-
-  
+    }  
 
     return 0;
 }
