@@ -15,13 +15,22 @@
 
 int main(void)
 {
-    int T=0,A=0,B=0; // T 는 케이스 개수 // A 와 B 는 더하는 수  
-    scanf("%d",&T);
-    for(int i=1; i<=T; i++) // 케이스 개수만큼 반복
+   // 방법 1
+    int t,a,b;
+    scanf("%d",&t);
+    for(int i = 1; i <= t; i ++)
     {
-        scanf("%d %d",&A,&B); // A 와 B 입력받기
-        int C = A + B; // 두수를 더한걸 C에 저장
-        printf("%d\n",C); // 저장한걸 출력
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+    }
+
+    // 방법 2
+    int i = 1;
+    while (i <= t)
+    {
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+        i ++;
     }
     
     return 0;
