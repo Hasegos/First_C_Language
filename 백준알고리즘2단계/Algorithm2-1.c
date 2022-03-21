@@ -1,23 +1,26 @@
 #include<stdio.h>
-//ë¬¸ì œ : ë‘ ì •ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì¡Œì„ë•Œ,Aì™€ Bë¥¼ ë¹„êµí•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤
+
+//¹®Á¦ : µÎ Á¤¼ö A¿Í B°¡ ÁÖ¾îÁ³À»¶§,A¿Í B¸¦ ºñ±³ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À
 
 int main(void)
 {
-    int A=0,B=0;
-    printf("ë‘ ì •ìˆ˜ Aì™€Bë¥¼ ìž…ë ¥í•˜ì„¸ìš”");
-    scanf("%d %d",&A,&B);
-    if(A>B)
+    // ¹æ¹ý 1
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if(a > b)
     {
         printf(">");
     }
-    else if(A<B)
+    else if(a < b)
     {
         printf("<");
     }
     else
     {
-        printf("=");
+        printf("==");
     }
 
+    // ¹æ¹ý 2
+    (a > b) ? printf(">") : (a < b) ? printf("<") : printf("==");
     return 0;
 }
